@@ -88,6 +88,7 @@
 
                 <a href="#portfolio" class="btn">Saiba Mais</a>
             </div>
+
             <div class="services-box">
             <i class='bx bx-code-alt'></i>
             <h3>Hardware</h3>
@@ -96,6 +97,8 @@
 
             <a href="#" class="btn">Saiba Mais</a>
             </div>
+            
+            
             <!-- <div class="services-box">
             <i class='bx bx-code-alt'></i>
             <h3>Mobile Development</h3>
@@ -207,7 +210,7 @@
     <section class="contact" id="contact">
         <h2>Entre em <span>Contato!</span></h2>
 
-        <form action="">
+        <form action="send-email.php" method="POST">
             <div class="input-box">
                 <input type="text" placeholder="Nome Completo">
                 <input type="email" placeholder="E-mail">
@@ -217,7 +220,7 @@
                 <input type="text" placeholder="Assunto">
             </div>
 
-            <textarea cols="30" rows="8" placeholder="Mensagem" id="formMessage"></textarea>
+            <textarea name="mensagem" cols="30" rows="8" placeholder="Mensagem" id="formMessage"></textarea>
 
             <a href="#" class="btn">Enviar Mensagem</a>
 
