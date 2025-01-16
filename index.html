@@ -210,20 +210,24 @@
     <section class="contact" id="contact">
         <h2>Entre em <span>Contato!</span></h2>
 
-        <form action="send-email.php" method="POST">
+        <form action="https://formsubmit.co/machadoluaan@gmail.com" method="POST" target="_blank">
             <div class="input-box">
-                <input type="text" placeholder="Nome Completo">
-                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="E-mail" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Número de Telefone">
-                <input type="text" placeholder="Assunto">
+                <input type="number" placeholder="Número de Telefone" required>
+                <input type="text" placeholder="Assunto" required>
             </div>
 
-            <textarea name="mensagem" cols="30" rows="8" placeholder="Mensagem" id="formMessage"></textarea>
+            <textarea name="mensagem" cols="30" rows="8" placeholder="Mensagem" id="formMessage" required></textarea>
 
-            <a href="#" class="btn">Enviar Mensagem</a>
 
+            <button class="btn" type="submit">Enviar Mensagem</button>
+
+            <input type="hidden" name="_subject" value="NOVO CONTATO">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
 
         </form>
     </section>
@@ -241,7 +245,7 @@
             <h3>Sobre Mim</h3>
             <h1>Desenvolvedor <span>Front-End</span> Web</h1>
 
-            <p>Busco aperfeiçoar meu desenvolvido em Front-End e adquirir conhecimento em Back-End. </p>
+            <p>Formado em Análise e Desenvolvimento de Sistemas. Busco aperfeiçoar meu desenvolvido em Front-End e adquirir conhecimento em Back-End. </p>
 
             <a href="#" class="btn">Saiba Mais</a>
         </div>
