@@ -212,11 +212,11 @@
 
         <form action="https://formsubmit.co/machadoluaan@gmail.com" method="POST" target="_blank">
             <div class="input-box">
-                <input type="text" placeholder="Nome Completo" required>
-                <input type="email" placeholder="E-mail" required>
+                <input type="text" placeholder="Nome Completo" name="name" required>
+                <input type="email" placeholder="E-mail" name="email" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Número de Telefone" required>
+                <input type="number" placeholder="Número de Telefone" name="number" required>
                 <input type="text" placeholder="Assunto" required>
             </div>
 
@@ -225,9 +225,11 @@
 
             <button class="btn" type="submit">Enviar Mensagem</button>
 
-            <input type="hidden" name="_subject" value="NOVO CONTATO">
+            <input type="hidden" name="_subject" value="From FormSubmit">
             <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
+            <!--<input type="hidden" name="_captcha" value="false">-->
+            <input type="hidden" name="_next" value="https://portifolio-wheat-one.vercel.app/mail-return.html">
+            <input type="hidden" name="_autoresponse" value="Olá, obrigado por entrar em contato. Retornarei o mais breve possível. &#013; Att, Luan Machado.">
 
         </form>
     </section>
