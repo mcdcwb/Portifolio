@@ -430,6 +430,10 @@ footer {
         max-width: 80%;
     }
 
+    .home-img {
+        margin-top: 5rem;
+    }
+
     .home-content, .about-content {
         width: 100%;
     }
@@ -453,6 +457,10 @@ footer {
         width: 100%;
     }
 
+    .about-content a {
+        margin-top: 1.6rem;
+        margin-inline: 5rem;
+    }
 
 }
 
