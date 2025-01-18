@@ -25,9 +25,7 @@
         d.getElementsByTagName('head')[0].appendChild(script);
         }(document));
         };
-        </script>
-
-    
+        </script>    
 </head>
 
 <body>
@@ -106,7 +104,7 @@
             <p>Possuo certificados de montagem e manutenção de hardwares. Já trabalhei na área de informática. Atualmente continuo efetuando pequenos serviços <em>freelancer</em>.</p>
             
 
-            <a href="#" class="btn">Saiba Mais</a>
+            <a href="#contact" class="btn">Saiba Mais</a>
             </div>
             
             
@@ -223,24 +221,28 @@
 
         <form action="https://formsubmit.co/machadoluaan@gmail.com" method="POST" target="_blank">
             <div class="input-box">
-                <input type="text" placeholder="Nome Completo" name="name" required>
+                <input type="text" placeholder="Nome Completo" name="name" style="text-transform: capitalize;" required>
                 <input type="email" placeholder="E-mail" name="email" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Número de Telefone" name="number" required>
-                <input type="text" placeholder="Assunto" required>
+                <input type="text" title="DDD + número" id="phonenumber" placeholder="N° de Telefone" name="number" maxlength="20">
+                <input type="text" placeholder="Assunto" id="formSubject" oninput="formatText('formSubject')" required>
             </div>
 
-            <textarea name="mensagem" cols="30" rows="8" placeholder="Mensagem" id="formMessage" required></textarea>
+            <textarea name="mensagem" cols="30" rows="8" placeholder="Mensagem" id="formMessage" oninput="formatText('formMessage')" required></textarea>
 
 
             <button class="btn" type="submit">Enviar Mensagem</button>
 
+
             <input type="hidden" name="_subject" value="From FormSubmit">
             <input type="text" name="_honey" style="display:none">
-            <!--<input type="hidden" name="_captcha" value="false">-->
             <input type="hidden" name="_next" value="https://portifolio-wheat-one.vercel.app/mail-return.html">
             <input type="hidden" name="_autoresponse" value="Olá, obrigado por entrar em contato. Retornarei o mais breve possível. &#013; Att, Luan Machado.">
+
+            <!-- Desativado pois reCaptcha não retorna e-mail para o usuário.
+            
+            <input type="hidden" name="_captcha" value="false">--> 
 
         </form>
     </section>
@@ -258,7 +260,7 @@
             <h3>Sobre Mim</h3>
             <h1>Desenvolvedor <span>Front-End</span> Web</h1>
 
-            <p>Formado em Análise e Desenvolvimento de Sistemas. Busco aperfeiçoar meu desenvolvido em Front-End e adquirir conhecimento em Back-End. </p>
+            <p>Formado em Análise e Desenvolvimento de Sistemas. Busco aperfeiçoar minhas habilidades em Front-End e adquirir melhor conhecimento, visando me tornar um desenvolvedor Full-Stack. </p>
 
             <a href="#" class="btn">Saiba Mais</a>
         </div>
@@ -275,5 +277,41 @@
 </body>
 
 <script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+<script>
+    function formatPhone(input) {
+        const phonenumber = input.value.replace(/\D/g, '');
+
+        const isCel = phonenumber.length === 11;
+        
+            if (isCel) {
+                input.value = phonenumber.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '($1) $2 $3-$4');
+            }
+
+            else {
+                input.value = phonenumber.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+            }
+        }
+
+    const phonenumberInput = document.getElementById('phonenumber');
+    
+    phonenumberInput.addEventListener('input', function() {
+        formatPhone(this);
+    })
+  </script>
+
+<script>
+    function formatText(inputId) {
+        const input = document.getElementById(inputId);
+        
+        const valor = input.value;
+
+        const formatedText = valor.charAt(0).toUpperCase() + valor.slice(1).toLowerCase();
+        
+        input.value = formatedText;
+    }
+</script>
 
 </html>
