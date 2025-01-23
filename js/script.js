@@ -17,19 +17,21 @@ function toggleMenu() {
 
 
 
-const button = document.getElementById('see-more-btn');
-const paragraph = document.querySelector('.service-description');
+//OPEN CLOSE Saiba Mais
+const seeMoreButtons = document.querySelectorAll('#see-more-btn');
 
-button.addEventListener('click', () => {
-    
-    if (paragraph.style.webkitLineClamp === 'none') {
+    seeMoreButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            
+            const description = button.previousElementSibling; 
 
-        paragraph.style.webkitLineClamp = '5';
-        button.textContent = 'Saiba Mais';
-    } else {
-
-        paragraph.style.webkitLineClamp = 'none';
-        button.textContent = 'Mostrar Menos';
-    }
-
+            if (description.style.webkitLineClamp === 'none') {
+                description.style.webkitLineClamp = '3';
+                button.textContent = 'Saiba Mais'; 
+            } else {
+                description.style.webkitLineClamp = 'none';
+                button.textContent = 'Mostrar Menos';
+            }
+        });
 });
+
