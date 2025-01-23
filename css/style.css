@@ -8,13 +8,15 @@
     --bg-color-02: #323946;
     --color-00: #0000001a;
 
-    /* Responsible Test 
+     /*
+     Responsible Test 
     --color-01: #999999;
     --color-02: #009539;
     --color-03: #7950f2;
     --color-04: #c00000;
-    --color-05: #232323; 
+    --color-05: #232323;
     */
+    
 
 }
 
@@ -227,7 +229,6 @@ span {
     box-shadow: 0 0 0.6rem var(--bg-color-01);
     overflow: hidden;
     display: flex;
-
 }
 
 .portfolio-box img {
@@ -288,7 +289,6 @@ span {
     align-items: center;
     width: 3rem;
     height: 3rem;
-    /* background: var(--text-color); */
     border-radius: 50%;
     border: solid 0.15rem var(--text-color);
 }
@@ -432,6 +432,11 @@ footer {
         max-width: 80%;
     }
 
+    .about-content {
+        margin-top: 4rem;
+        text-align: center;
+    }
+
     .home-img {
         margin-top: 5rem;
     }
@@ -475,20 +480,35 @@ footer {
     }
 
     .portfolio-box .portfolio-layer p {
-        display: none;
+        font-size: 0.8rem;
     }
 
     .portfolio-box .portfolio-layer h4 {
         font-size: 1rem;
     }
 
+    .portfolio-box .portfolio-layer i {
+        font-size: 1.8rem;
+    }
+
+    #em-color em {
+        font-size: 1rem;
+        color: rgb(255, 100, 100);
+    }
+
+    body p::first-letter {
+        margin-left: 1rem;
+    }
+
 }
 
 /* SMALL */
 @media (min-width: 576px) {
-    /* header  {
+    /*For responsible test
+    header  {
         background-color: var(--color-02)  ;
-    } */
+    }
+    */ 
 
     .home {
         margin-top: 5rem;
@@ -498,7 +518,7 @@ footer {
         width: 65%;
         max-width: 65%;
     }
-
+    
     .portfolio-box .portfolio-layer { 
         position: absolute;
         bottom: 0;
@@ -526,10 +546,12 @@ footer {
 }
 
 /* MEDIUM */
-@media (min-width: 768px) {
-    /* header  {
+@media (min-width: 836px) {
+    /*For responsible test 
+    header  {
         background-color: var(--color-03)  ;
-    } */
+    }
+    */
 
     .menu-hamburguer {
         display: none;
@@ -565,6 +587,18 @@ footer {
         grid-template-columns: auto auto;
     }
 
+    .portfolio-box .portfolio-layer p {
+        font-size: 1rem;
+    }
+
+    .portfolio-box .portfolio-layer h4 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-layer a {
+        font-size: 1rem;
+    }
+
     form .input-box input {
         width: 49%;
     }
@@ -573,9 +607,11 @@ footer {
 
 /* LARGE */
 @media (min-width: 992px) {
-    /* header  {
+    /*For responsible test
+    header  {
         background-color: var(--color-04)  ;
-    } */
+    }
+    */
 
     .home {
         margin-top: 5rem;
@@ -584,18 +620,28 @@ footer {
     .services-container {
         flex-direction: row;
         gap: 1.2rem;
+        align-items: start;
     }
 
     .home-img, .about-img {
         max-width: 25%;
     }
+
+    .services-box {
+        height: 100%;
+        width: 100%;
+        margin: 2rem;
+    }
+
 }
 
 /* EXTRALARGE */
 @media (min-width: 1200px) {
-    /* header  {
+    /*For responsible test
+    header  {
         background-color: var(--color-05);
-    } */
+    }
+    */
 
     .home-content h1 {
         font-size: 2.7rem;
@@ -609,6 +655,9 @@ footer {
         grid-template-columns: auto auto auto;
     }
 
-}
+    .services-box {
+        max-width: 800px;
+    }
 
+}
 /* /MEDIA QUERIES */
