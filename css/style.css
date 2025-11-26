@@ -8,7 +8,7 @@
     --bg-color-02: #323946;
     --color-00: #0000001a;
 
-     /*
+    /*
      Responsible Test 
     --color-01: #999999;
     --color-02: #009539;
@@ -16,7 +16,7 @@
     --color-04: #c00000;
     --color-05: #232323;
     */
-    
+
 
 }
 
@@ -70,14 +70,16 @@ header {
     background-color: var(--bg-color-01);
 }
 
-.nav a, .nav-responsive a {
+.nav a,
+.nav-responsive a {
     font-size: 1.2rem;
     color: var(--text-color);
     padding: 0.5rem 1rem;
     transition: 0.4s;
 }
 
-.nav a:hover, .nav-responsive a:hover {
+.nav a:hover,
+.nav-responsive a:hover {
     color: var(--main-color);
 }
 
@@ -91,14 +93,16 @@ span {
     color: var(--main-color);
 }
 
-.home, .about {
+.home,
+.about {
     display: flex;
     flex: row;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.home-img img, .about-img img {
+.home-img img,
+.about-img img {
     width: 100%;
     margin-bottom: -0.42rem;
     padding-right: -0.4rem;
@@ -107,34 +111,38 @@ span {
 .home-img {
     border-right: solid 0.3rem var(--main-color);
     border-bottom: solid 0.3rem var(--main-color);
-    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;     
+    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
 }
 
 .about-img {
     border-left: solid 0.3rem;
     border-bottom: solid 0.3rem;
-    border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1;     
+    border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1;
 }
 
 .about {
     background-color: var(--bg-color-02);
 }
 
-.home-content, .about-content {
+.home-content,
+.about-content {
     width: 45%;
 }
 
-.home-content h1, .about-content h1 {
-    font-weight: 700; 
+.home-content h1,
+.about-content h1 {
+    font-weight: 700;
     line-height: 1.3;
 }
 
-.home-content h3, .about-content h3 {
+.home-content h3,
+.about-content h3 {
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-.home-content p, .about-content p {
+.home-content p,
+.about-content p {
     margin-top: 1.2rem;
     text-align: justify;
 }
@@ -220,7 +228,7 @@ span {
 .portfolio-container {
     display: grid;
     gap: 1.2rem;
-    
+
 }
 
 .portfolio-box {
@@ -238,22 +246,22 @@ span {
 }
 
 .portfolio-box img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.portfolio-box .portfolio-layer { 
+.portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background:  linear-gradient(transparent, var(--bg-color-02), var(--main-color));
+    background: linear-gradient(transparent, var(--bg-color-02), var(--main-color));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0.4rem;
+    padding: 0.4;
     transform: translateY(100rem);
     transition: 0.5s ease;
 }
@@ -266,7 +274,7 @@ span {
     color: var(--text-color);
 }
 
-.portfolio-layer a:hover { 
+.portfolio-layer a:hover {
     background-color: var(--main-color);
     color: var(--text-color);
     box-shadow: 0 0 0.8rem var(--main-color);
@@ -279,11 +287,13 @@ span {
 
 .portfolio-layer h4 {
     font-size: 1.8rem;
+    padding-top: 0.5rem;
 }
 
 .portfolio-layer p {
-    margin: 0.2rem 0 0.5rem;
+    margin: 0 0.8rem 0 0.2rem;
 }
+
 .portfolio-layer a {
     display: inline-flex;
     justify-content: center;
@@ -292,13 +302,14 @@ span {
     height: 3rem;
     border-radius: 50%;
     border: solid 0.15rem var(--text-color);
+
 }
 
 form {
     max-width: 45rem;
     margin: 0.6rem auto;
     text-align: center;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
 }
 
 form .input-box {
@@ -307,7 +318,8 @@ form .input-box {
     flex-wrap: wrap;
 }
 
-form .input-box input, form textarea {
+form .input-box input,
+form textarea {
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
@@ -321,6 +333,10 @@ form textarea {
     resize: vertical;
     max-height: 800px;
     font-size: 1.2rem;
+}
+
+form button {
+    font-size: 1rem;
 }
 
 footer {
@@ -337,7 +353,8 @@ footer {
     width: 3.5rem;
 }
 
-.social-media a, .portfolio-layer a {
+.social-media a,
+.portfolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -346,9 +363,8 @@ footer {
     background-color: transparent;
     border-radius: 50%;
     font-size: 2rem;
-    margin: 1.8rem 1rem;
+    margin: 1rem 1rem;
     transition: 0.5s ease;
-
 }
 
 
@@ -373,7 +389,9 @@ footer {
     cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
     width: 2rem;
     height: 0.3rem;
     background-color: var(--text-color);
@@ -392,6 +410,7 @@ footer {
 .change .bar3 {
     transform: translate(0, -0.65rem) rotate(45deg);
 }
+
 /* /MENU HAMBURGUER */
 
 /* MEDIA QUERIES */
@@ -404,7 +423,7 @@ footer {
     .menu-hamburguer {
         display: block;
     }
-    
+
     .nav {
         display: none;
     }
@@ -423,12 +442,14 @@ footer {
         margin-top: 3rem;
     }
 
-    .home, .about {
+    .home,
+    .about {
         flex-direction: column;
         gap: 1.2rem;
     }
 
-    .home-img, .about-img {
+    .home-img,
+    .about-img {
         width: 80%;
         max-width: 80%;
     }
@@ -442,7 +463,8 @@ footer {
         margin-top: 5rem;
     }
 
-    .home-content, .about-content {
+    .home-content,
+    .about-content {
         width: 100%;
     }
 
@@ -450,7 +472,8 @@ footer {
         text-align: center;
     }
 
-    .home-content h1, .about-content h1 {
+    .home-content h1,
+    .about-content h1 {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.3;
@@ -471,9 +494,8 @@ footer {
     }
 
     .portfolio-box .portfolio-layer {
-        background: linear-gradient(var(--main-color), transparent);
-        transform:translateY(100rem);
-
+        background: linear-gradient(var(--bg-color-02), var(--main-color));
+        transform: translateY(100rem);
     }
 
     .portfolio-box:hover .portfolio-layer {
@@ -481,24 +503,30 @@ footer {
     }
 
     .portfolio-box .portfolio-layer p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .portfolio-box .portfolio-layer h4 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .portfolio-box .portfolio-layer i {
-        font-size: 1.8rem;
-    }
-
-    #em-color em {
-        font-size: 1rem;
-        color: rgb(255, 100, 100);
+        font-size: 2.0rem;
     }
 
     body p::first-letter {
         margin-left: 1rem;
+    }
+
+    .portfolio-layer span {
+        margin-bottom: 0.5rem;
+        color: #FFB84C;
+        font-size: 1.2rem;
+        font-weight: bold;
+        /* text-shadow: -0.5px -0.5px 0 rgb(0, 0, 0),
+            0.5px -0.5px 0 rgb(0, 0, 0),
+            -0.5px 0.5px 0 rgb(0, 0, 0),
+            0.5px 0.5px 0 rgb(0, 0, 0); */
     }
 
 }
@@ -509,24 +537,25 @@ footer {
     header  {
         background-color: var(--color-02)  ;
     }
-    */ 
+    */
 
     .home {
         margin-top: 5rem;
     }
 
-    .home-img, .about-img {
+    .home-img,
+    .about-img {
         width: 65%;
         max-width: 65%;
     }
-    
-    .portfolio-box .portfolio-layer { 
+
+    .portfolio-box .portfolio-layer {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background:  linear-gradient(transparent, var(--bg-color-02), var(--main-color));
+        background: linear-gradient(var(--bg-color-01), var(--main-color));
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -543,7 +572,10 @@ footer {
 
     .portfolio-box .portfolio-layer h4 {
         font-size: 2rem;
+
     }
+
+
 }
 
 /* MEDIUM */
@@ -562,20 +594,24 @@ footer {
         display: block;
     }
 
-    .nav-responsive, .nav-responsive a {
+    .nav-responsive,
+    .nav-responsive a {
         display: none;
     }
 
-    .home, .about {
+    .home,
+    .about {
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    .home-img, .about-img {
+    .home-img,
+    .about-img {
         max-width: 35%;
     }
 
-    .home-content, .about-content {
+    .home-content,
+    .about-content {
         width: 50%;
     }
 
@@ -594,6 +630,7 @@ footer {
 
     .portfolio-box .portfolio-layer h4 {
         font-size: 1.5rem;
+
     }
 
     .portfolio-layer a {
@@ -604,7 +641,10 @@ footer {
         width: 49%;
     }
 
-} 
+    .portfolio-layer p {
+        margin: 0.2rem 0 0.5rem;
+    }
+}
 
 /* LARGE */
 @media (min-width: 992px) {
@@ -624,7 +664,8 @@ footer {
         align-items: start;
     }
 
-    .home-img, .about-img {
+    .home-img,
+    .about-img {
         max-width: 25%;
     }
 
@@ -633,6 +674,28 @@ footer {
         width: 100%;
         margin: 2rem;
     }
+
+    .social-media a,
+    .portfolio-layer a {
+
+        margin: 1.8rem 1rem;
+
+    }
+
+    .portfolio-box .portfolio-layer p {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-box .portfolio-layer h4 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-layer span {
+        color: #FFB84C;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
 
 }
 
@@ -661,4 +724,5 @@ footer {
     }
 
 }
+
 /* /MEDIA QUERIES */
